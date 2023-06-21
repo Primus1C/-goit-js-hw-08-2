@@ -7,7 +7,6 @@ import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
 
-
 const gallery = document.querySelector('.gallery');
 
 galleryItems.forEach(element => {
@@ -24,7 +23,7 @@ galleryItems.forEach(element => {
   gallery.append(li);
 });
 
-const lightbox = new SimpleLightbox(".gallery a", {
+new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionDelay: 250,
 })
