@@ -12,4 +12,9 @@ function videoPlayerTimeUpdate(data) {
 
 }
 
-player.on('timeupdate', onPlay);
+player.on(
+  'timeupdate',
+  throttle(function (data) {
+    window.localStorage.setItem('videoplayer-current-time', data.seconds);
+  }, 250)
+);
