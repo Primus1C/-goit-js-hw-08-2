@@ -18,3 +18,4 @@ player.on(
     window.localStorage.setItem('videoplayer-current-time', data.seconds);
   }, 250)
 );
+
