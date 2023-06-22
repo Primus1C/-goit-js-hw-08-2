@@ -6,12 +6,11 @@ import { galleryItems } from './gallery-items';
 
 console.log(galleryItems);
 
-
 const gallery = document.querySelector('.gallery');
 
 galleryItems.forEach(element => {
   const li = document.createElement('li');
-  li.innerHTML = `<a class="gallery__link">
+  li.innerHTML = `<a class='gallery__link'>
                         <img
                             class="gallery__image"
                             src="${element.preview}"
@@ -23,7 +22,7 @@ galleryItems.forEach(element => {
   gallery.append(li);
 });
 
-new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-})
+const sl = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
