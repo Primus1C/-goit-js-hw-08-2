@@ -7,7 +7,7 @@ const refs = {
 };
 
 refs.form.addEventListener('submit', onFormSubmit);
-refs.form.addEventListener('input', throttle(onInput, 1000));
+refs.form.addEventListener('input', throttle(onInput, 1500));
 
 const STORAGE_KEY = 'feedback-form-state';
 
@@ -30,6 +30,7 @@ function onInput(evt) {
 function populateAreas() {
   const savedMsg = localStorage.getItem(STORAGE_KEY);
   if (savedMsg) {
+    console.log(savedMsg);
     msg = JSON.parse(savedMsg);
     refs.emailarea.value = msg.email;
     refs.textarea.value = msg.message;
