@@ -11,7 +11,6 @@ populatePlayer();
 
 function videoPlayerTimeUpdate(data) {
   window.localStorage.setItem(STORAGE_KEY, data.seconds);
-  console.log(data.seconds);
 }
 
 function populatePlayer() {
