@@ -30,8 +30,8 @@ function onInput(evt) {
 function populateAreas() {
   const savedMsg = localStorage.getItem(STORAGE_KEY);
   if (savedMsg) {
-    console.log(savedMsg);
-    msg = JSON.parse(savedMsg);
+    //console.log(savedMsg);
+    const msg = JSON.parse(savedMsg);
     refs.emailarea.value = msg.email;
     refs.textarea.value = msg.message;
   }
