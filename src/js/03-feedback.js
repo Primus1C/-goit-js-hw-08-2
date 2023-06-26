@@ -20,7 +20,7 @@ function onFormSubmit(evt) {
 }
 
 function onInput(evt) {
-  feedback = JSON.stringify({
+  const feedback = JSON.stringify({
     message: refs.textarea.value,
     email: refs.emailarea.value,
   });
